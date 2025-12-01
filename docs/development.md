@@ -1,6 +1,6 @@
 # Development Guide
 
-This document provides comprehensive information for setting up and developing the q-server application.
+This document provides comprehensive information for setting up and developing the express-js-template application.
 
 ## Table of Contents
 
@@ -44,7 +44,7 @@ Before starting development, ensure you have the following installed:
 
 ```bash
 git clone <repository-url>
-cd q-server
+cd express-js-template
 ```
 
 ### 2. Install Dependencies
@@ -84,7 +84,7 @@ All environment variables are required and must be configured properly.
 | ----------------------------------- | -------------------------------------------- | ----------------------------------------------- | -------- |
 | `PORT`                              | Server port number                           | `3000`                                          | Yes      |
 | `HOST_URL`                          | Application host URL                         | `http://localhost:3000`                         | Yes      |
-| `DATABASE_URL`                      | MongoDB connection string                    | `mongodb://localhost:27017/q-server`            | Yes      |
+| `DATABASE_URL`                      | MongoDB connection string                    | `mongodb://localhost:27017/express-js-template` | Yes      |
 | `ALLOWED_ORIGINS`                   | Comma-separated list of allowed CORS origins | `http://localhost:3000,https://app.example.com` | Yes      |
 | `ENCRYPTION_KEY`                    | Key for encrypting session cookies           | `your-secret-key-here`                          | Yes      |
 | `USER_LOGIN_SESSION_COOKIE_NAME`    | Name for OTP session cookie                  | `user_login_session`                            | Yes      |
@@ -103,7 +103,7 @@ All environment variables are required and must be configured properly.
 # .env
 PORT=3000
 HOST_URL=http://localhost:3000
-DATABASE_URL=mongodb://localhost:27017/q-server-dev
+DATABASE_URL=mongodb://localhost:27017/express-js-template-dev
 ALLOWED_ORIGINS=http://localhost:3000,http://localhost:3001
 ENCRYPTION_KEY=your-very-secure-encryption-key-here
 USER_LOGIN_SESSION_COOKIE_NAME=user_login_session
@@ -289,7 +289,7 @@ Runs the complete development pipeline:
 Understanding the project structure helps with navigation and development.
 
 ```
-q-server/
+express-js-template/
 ├── src/                           # Source code
 │   ├── auth/                      # Authentication modules
 │   │   ├── user-login-session.ts  # OTP session management

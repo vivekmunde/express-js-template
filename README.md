@@ -1,4 +1,4 @@
-# q-server
+# express-js-template
 
 A comprehensive Node.js REST API server built with Express.js, TypeScript, MongoDB, and Prisma ORM, featuring robust authentication, role-based access control (RBAC), multi-tenancy, and internationalization support.
 
@@ -82,7 +82,7 @@ A comprehensive Node.js REST API server built with Express.js, TypeScript, Mongo
 
    ```bash
    git clone <repository-url>
-   cd q-server
+   cd express-js-template
    ```
 
 2. **Install dependencies**
@@ -138,10 +138,10 @@ docker-compose down
 
 ```bash
 # Build image
-docker build -t q-server .
+docker build -t express-js-template .
 
 # Run container
-docker run -p 3000:3000 --env-file .env q-server
+docker run -p 3000:3000 --env-file .env express-js-template
 ```
 
 ## Available Scripts
@@ -160,7 +160,7 @@ For complete scripts reference, see [Development Guide](./docs/development.md).
 ## Project Structure
 
 ```
-q-server/
+express-js-template/
 ├── src/                    # Source code
 │   ├── auth/               # Authentication modules
 │   ├── routes/             # API endpoints

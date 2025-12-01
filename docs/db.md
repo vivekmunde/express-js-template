@@ -1,6 +1,6 @@
 # Database Schema
 
-This document provides comprehensive documentation for the database schema and data models used in q-server.
+This document provides comprehensive documentation for the database schema and data models used in express-js-template.
 
 ## Table of Contents
 

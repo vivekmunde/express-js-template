@@ -1,6 +1,6 @@
 # Authentication & Authorization
 
-This document covers the authentication system and Role-Based Access Control (RBAC) implementation in q-server.
+This document covers the authentication system and Role-Based Access Control (RBAC) implementation in express-js-template.
 
 ## Table of Contents
 

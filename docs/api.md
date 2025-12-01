@@ -1,6 +1,6 @@
 # API Documentation
 
-This document provides comprehensive documentation for all API endpoints in the q-server application.
+This document provides comprehensive documentation for all API endpoints in the express-js-template application.
 
 ## Base URL Structure
 
