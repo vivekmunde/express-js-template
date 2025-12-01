@@ -1,0 +1,3 @@
+const OTP_INTERVAL_IN_SECONDS = 60;
+
+export { OTP_INTERVAL_IN_SECONDS };

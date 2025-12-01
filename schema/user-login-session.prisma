@@ -1,0 +1,29 @@
+model UserLoginSession {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String    @db.ObjectId
+  otp       String
+  createdAt DateTime  @default(now())
+  createdBy String    @db.ObjectId
+  updatedAt DateTime?
+  updatedBy String?   @db.ObjectId
+}
+
+model UserLoginSessionChangeLog {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  userLoginId String    @db.ObjectId
+  userId      String    @db.ObjectId
+  otp         String
+  createdAt   DateTime
+  createdBy   String    @db.ObjectId
+  updatedAt   DateTime?
+  updatedBy   String?   @db.ObjectId
+  archivedAt  DateTime?
+  archivedBy  String?   @db.ObjectId
+}
+
+model UserLoginAttempts {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  sessionId String   @db.ObjectId
+  createdAt DateTime @default(now())
+  createdBy String   @db.ObjectId
+}

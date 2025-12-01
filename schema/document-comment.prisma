@@ -1,0 +1,32 @@
+model DocumentComment {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  organizationId String    @db.ObjectId
+  documentId     String    @db.ObjectId
+  projectId      String    @db.ObjectId
+  parentId       String?   @db.ObjectId
+  toUserIds      String[]  @db.ObjectId
+  ccUserIds      String[]  @db.ObjectId
+  comment        String
+  createdAt      DateTime  @default(now())
+  createdBy      String    @db.ObjectId
+  updatedAt      DateTime?
+  updatedBy      String?   @db.ObjectId
+}
+
+model DocumentCommentChangeLog {
+  id                String    @id @default(auto()) @map("_id") @db.ObjectId
+  documentCommentId String    @db.ObjectId
+  organizationId    String?   @db.ObjectId
+  documentId        String?   @db.ObjectId
+  projectId         String?   @db.ObjectId
+  parentId          String?   @db.ObjectId
+  toUserIds         String[]  @db.ObjectId
+  ccUserIds         String[]  @db.ObjectId
+  comment           String
+  createdAt         DateTime?
+  createdBy         String?   @db.ObjectId
+  updatedAt         DateTime?
+  updatedBy         String?   @db.ObjectId
+  archivedAt        DateTime?
+  archivedBy        String?   @db.ObjectId
+}

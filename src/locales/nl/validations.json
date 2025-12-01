@@ -1,0 +1,62 @@
+{
+  "boolean": {
+    "invalid": "Ongeldige boolean waarde"
+  },
+  "code": {
+    "required": "Code is verplicht"
+  },
+  "color": {
+    "required": "Kleur is verplicht"
+  },
+  "disabled": {
+    "required": "Uitgeschakeld is verplicht"
+  },
+  "documentNumberPrefix": {
+    "required": "Document nummer prefix is verplicht"
+  },
+  "documentStatuses": {
+    "required": "Document status is verplicht"
+  },
+  "documentTypes": {
+    "required": "Document type is verplicht"
+  },
+  "email": {
+    "invalid": "Ongeldig e-mailadres",
+    "required": "E-mailadres is verplicht"
+  },
+  "language": {
+    "required": "Taal is verplicht"
+  },
+  "listSearchParams": {
+    "page": {
+      "invalid": "Ongeldige pagina nummer, moet groter zijn dan 0."
+    },
+    "size": {
+      "invalid": "Ongeldige pagina grootte, moet een getal tussen 1 en 100 zijn."
+    },
+    "sortBy": {
+      "invalid": "Ongeldige sorteer veld, moet van '{{sortByFields}}' zijn."
+    },
+    "sortOrder": {
+      "invalid": "Ongeldige sorteer volgorde, moet 'asc' of 'desc' zijn."
+    }
+  },
+  "name": {
+    "required": "Naam is verplicht"
+  },
+  "otp": {
+    "required": "OTP is verplicht"
+  },
+  "permission": {
+    "required": "Permissie is verplicht"
+  },
+  "role": {
+    "required": "Rol is verplicht"
+  },
+  "themeMode": {
+    "required": "Thema modus is verplicht"
+  },
+  "token": {
+    "required": "Token is verplicht"
+  }
+}

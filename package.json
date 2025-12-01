@@ -1,0 +1,65 @@
+{
+  "name": "express-ts-prisma-mongo",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "npm run prisma:generate && npm run format && npm run lint && npm run tsc && tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prisma:aggregate": "tsx scripts/aggregate-prisma-schema.ts",
+    "prisma:generate": "npm run prisma:aggregate && prisma generate",
+    "prisma:push": "prisma db push",
+    "tsc": "tsc",
+    "format": "prettier --write . --log-level silent",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "prepare": "husky install",
+    "setup-db": "npx prisma db push && npm run prisma:generate && tsx setup/db/setup.mts",
+    "setup-clean-db": "npx prisma db push && npm run prisma:generate && tsx setup/db/clean.mts && npm run setup-db"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.864.0",
+    "@prisma/client": "^5.7.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^17.2.1",
+    "express": "^4.18.2",
+    "i18next": "^25.3.2",
+    "i18next-fs-backend": "^2.6.0",
+    "i18next-http-middleware": "^3.7.4",
+    "zod": "^4.0.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@types/cookie-parser": "^1.4.9",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.21",
+    "@types/i18next": "^13.0.0",
+    "@types/node": "^20.11.19",
+    "bson": "^6.10.4",
+    "eslint": "^9.31.0",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
+    "prisma": "^5.7.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.37.0"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+}

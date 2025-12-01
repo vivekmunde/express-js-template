@@ -1,0 +1,43 @@
+type TColors {
+  primary           String?
+  primaryForeground String?
+  link              String?
+}
+
+type TThemeVariables {
+  colors TColors?
+}
+
+type TTheme {
+  light TThemeVariables?
+  dark  TThemeVariables?
+}
+
+model Organization {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  name           String
+  code           String    @unique
+  theme          TTheme?
+  email          String?
+  permissionKeys String[]
+  createdAt      DateTime  @default(now())
+  createdBy      String    @db.ObjectId
+  updatedAt      DateTime?
+  updatedBy      String?   @db.ObjectId
+}
+
+model OrganizationChangeLog {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  organizationId String    @db.ObjectId
+  name           String
+  code           String
+  theme          TTheme?
+  email          String?
+  permissionKeys String[]
+  createdAt      DateTime?
+  createdBy      String?   @db.ObjectId
+  updatedAt      DateTime?
+  updatedBy      String?   @db.ObjectId
+  archivedAt     DateTime?
+  archivedBy     String?   @db.ObjectId
+}
