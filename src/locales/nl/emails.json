@@ -1,0 +1,12 @@
+{
+  "copyright": "Q © 2024. Alle Rechte vorbehalten.",
+  "otp": {
+    "html": {
+      "hello": "Hallo,",
+      "otpValidFor": "Dieses OTP ist für die nächsten {{otpAge}} Minuten gültig. Bitte teilen Sie es nicht mit anderen.",
+      "yourOtpIs": "Ihr einmaliges Passwort (OTP) für den Q-Zugriff ist:"
+    },
+    "subject": "Ihr Q OTP",
+    "text": "Ihr einmaliges Passwort (OTP) für den Q-Zugriff ist: \"{{otp}}\". Dieses OTP ist für die nächsten {{otpAge}} Minuten gültig. Bitte teilen Sie es nicht mit anderen."
+  }
+}

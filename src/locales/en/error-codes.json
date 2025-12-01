@@ -1,0 +1,14 @@
+{
+  "DOCUMENT_STATUS_IN_USE": "The document status is being used in one or more documents. So the document status cannot be deleted.",
+  "DOCUMENT_TYPE_IN_USE": "The document type is being used in one or more documents. So the document type cannot be deleted.",
+  "DUPLICATE_ORGANIZATION_CODE": "Organization code already exists!",
+  "INVALID_OTP": "Invalid OTP!",
+  "INVALID_TOKEN": "Invalid token!",
+  "NOT_FOUND": "The requested resource was not found!",
+  "SESSION_EXPIRED": "Session expired!",
+  "SYSTEM_USER_EXISTS": "System user already exists!",
+  "TOO_EARLY_TO_RESEND_OTP": "Please wait 30 seconds before resending OTP!",
+  "UNAUTHORIZED": "Unauthorized access !",
+  "USER_DOES_NOT_EXIST": "User does not exist!",
+  "USER_EXISTS": "User already exists!"
+}

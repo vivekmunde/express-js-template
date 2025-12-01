@@ -1,0 +1,38 @@
+type TDocumentTypeColors {
+  background String
+  foreground String
+}
+
+type TDocumentTypeColor {
+  light TDocumentTypeColors
+  dark  TDocumentTypeColors
+}
+
+model DocumentType {
+  id             String              @id @default(auto()) @map("_id") @db.ObjectId
+  organizationId String              @db.ObjectId
+  name           String
+  description    String?
+  color          TDocumentTypeColor?
+  disabled       Boolean             @default(false)
+  createdAt      DateTime            @default(now())
+  createdBy      String              @db.ObjectId
+  updatedAt      DateTime?
+  updatedBy      String?             @db.ObjectId
+}
+
+model DocumentTypeChangeLog {
+  id             String              @id @default(auto()) @map("_id") @db.ObjectId
+  documentTypeId String              @db.ObjectId
+  organizationId String?             @db.ObjectId
+  name           String?
+  description    String?
+  color          TDocumentTypeColor?
+  disabled       Boolean             @default(false)
+  createdAt      DateTime?
+  createdBy      String?             @db.ObjectId
+  updatedAt      DateTime?
+  updatedBy      String?             @db.ObjectId
+  archivedAt     DateTime?
+  archivedBy     String?             @db.ObjectId
+}

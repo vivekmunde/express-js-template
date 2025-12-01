@@ -1,0 +1,14 @@
+{
+  "DOCUMENT_STATUS_IN_USE": "Het document status wordt gebruikt in één of meer documenten. Dus het document status kan niet worden verwijderd.",
+  "DOCUMENT_TYPE_IN_USE": "Het document type wordt gebruikt in één of meer documenten. Dus het document type kan niet worden verwijderd.",
+  "DUPLICATE_ORGANIZATION_CODE": "De organisatie code bestaat al!",
+  "INVALID_OTP": "Ongeldige OTP!",
+  "INVALID_TOKEN": "Ongeldige token!",
+  "NOT_FOUND": "De gevraagde resource was niet gevonden!",
+  "SESSION_EXPIRED": "Sessie verlopen!",
+  "SYSTEM_USER_EXISTS": "Systeem gebruiker bestaat al!",
+  "TOO_EARLY_TO_RESEND_OTP": "Wacht 30 seconden voordat u de OTP opnieuw kunt verzenden!",
+  "UNAUTHORIZED": "Onbevoegd toegang",
+  "USER_DOES_NOT_EXIST": "Gebruiker bestaat niet!",
+  "USER_EXISTS": "Gebruiker bestaat al!"
+}

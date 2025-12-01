@@ -1,0 +1,30 @@
+model Project {
+  id                   String    @id @default(auto()) @map("_id") @db.ObjectId
+  organizationId       String    @db.ObjectId
+  name                 String
+  description          String?
+  documentNumberPrefix String
+  documentTypeIds      String[]  @db.ObjectId
+  documentStatusIds    String[]  @db.ObjectId
+  createdAt            DateTime  @default(now())
+  createdBy            String    @db.ObjectId
+  updatedAt            DateTime?
+  updatedBy            String?   @db.ObjectId
+}
+
+model ProjectChangeLog {
+  id                   String    @id @default(auto()) @map("_id") @db.ObjectId
+  projectId            String    @db.ObjectId
+  organizationId       String?   @db.ObjectId
+  name                 String?
+  description          String?
+  documentNumberPrefix String?
+  documentTypeIds      String[]  @db.ObjectId
+  documentStatusIds    String[]  @db.ObjectId
+  createdAt            DateTime?
+  createdBy            String?   @db.ObjectId
+  updatedAt            DateTime?
+  updatedBy            String?   @db.ObjectId
+  archivedAt           DateTime?
+  archivedBy           String?   @db.ObjectId
+}

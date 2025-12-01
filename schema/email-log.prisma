@@ -1,0 +1,19 @@
+type TEmailAddress {
+  email String
+  name  String?
+}
+
+model EmailLog {
+  id        String          @id @default(auto()) @map("_id") @db.ObjectId
+  to        TEmailAddress[]
+  cc        TEmailAddress[]
+  bcc       TEmailAddress[]
+  from      TEmailAddress?
+  replyTo   TEmailAddress?
+  subject   String
+  text      String?
+  html      String?
+  messageId String?
+  createdAt DateTime        @default(now())
+  createdBy String?         @db.ObjectId
+}

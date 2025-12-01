@@ -1,0 +1,62 @@
+{
+  "boolean": {
+    "invalid": "Invalid boolean value"
+  },
+  "code": {
+    "required": "Code is required"
+  },
+  "color": {
+    "required": "Color is required"
+  },
+  "disabled": {
+    "required": "Disabled is required"
+  },
+  "documentNumberPrefix": {
+    "required": "Document number prefix is required"
+  },
+  "documentStatuses": {
+    "required": "Document status is required"
+  },
+  "documentTypes": {
+    "required": "Document type is required"
+  },
+  "email": {
+    "invalid": "Invalid email address",
+    "required": "Email is required"
+  },
+  "language": {
+    "required": "Language is required"
+  },
+  "listSearchParams": {
+    "page": {
+      "invalid": "Invalid page number, must be greater than 0."
+    },
+    "size": {
+      "invalid": "Invalid page size, must be a number between 1 and 100."
+    },
+    "sortBy": {
+      "invalid": "Invalid sort by field, must be from '{{sortByFields}}'."
+    },
+    "sortOrder": {
+      "invalid": "Invalid sort order, must be either 'asc' or 'desc'."
+    }
+  },
+  "name": {
+    "required": "Name is required"
+  },
+  "otp": {
+    "required": "OTP is required"
+  },
+  "permission": {
+    "required": "Permission is required"
+  },
+  "role": {
+    "required": "Role is required"
+  },
+  "themeMode": {
+    "required": "Theme mode is required"
+  },
+  "token": {
+    "required": "Token is required"
+  }
+}

@@ -1,0 +1,27 @@
+model ApiErrorLog {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  statusCode    Int?
+  errorMessage  String?
+  errorStack    String?
+  url           String?
+  requestBody   String?
+  requestMethod String?
+  requestMode   String?
+  requestText   String?
+  userId        String?
+  createdAt     DateTime @default(now())
+  createdBy     String?  @db.ObjectId
+}
+
+model UiErrorLog {
+  id                  String   @id @default(auto()) @map("_id") @db.ObjectId
+  errorMessage        String?
+  errorName           String?
+  errorStack          String?
+  errorComponentStack String?
+  errorDigest         String?
+  url                 String?
+  userId              String?
+  createdAt           DateTime @default(now())
+  createdBy           String?  @db.ObjectId
+}

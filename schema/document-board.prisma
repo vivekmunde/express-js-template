@@ -1,0 +1,26 @@
+model DocumentBoard {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  organizationId String    @db.ObjectId
+  title          String
+  description    String?
+  queueIds       String[]  @db.ObjectId
+  createdAt      DateTime  @default(now())
+  createdBy      String    @db.ObjectId
+  updatedAt      DateTime?
+  updatedBy      String?   @db.ObjectId
+}
+
+model DocumentBoardChangeLog {
+  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  documentBoardId String    @db.ObjectId
+  organizationId  String?   @db.ObjectId
+  title           String?
+  description     String?
+  queueIds        String[]  @db.ObjectId
+  createdAt       DateTime?
+  createdBy       String?   @db.ObjectId
+  updatedAt       DateTime?
+  updatedBy       String?   @db.ObjectId
+  archivedAt      DateTime?
+  archivedBy      String?   @db.ObjectId
+}

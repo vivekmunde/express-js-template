@@ -1,0 +1,26 @@
+model Role {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  organizationId String?   @db.ObjectId
+  name           String
+  description    String?
+  permissionKeys String[]
+  createdAt      DateTime  @default(now())
+  createdBy      String    @db.ObjectId
+  updatedAt      DateTime?
+  updatedBy      String?   @db.ObjectId
+}
+
+model RoleChangeLog {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  roleId         String    @db.ObjectId
+  organizationId String?   @db.ObjectId
+  name           String?
+  description    String?
+  permissionKeys String[]
+  createdAt      DateTime?
+  createdBy      String?   @db.ObjectId
+  updatedAt      DateTime?
+  updatedBy      String?   @db.ObjectId
+  archivedAt     DateTime?
+  archivedBy     String?   @db.ObjectId
+}
