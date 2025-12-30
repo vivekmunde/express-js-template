@@ -4,7 +4,7 @@ import { consoleSuccess, consoleWarning } from './log.mts';
 
 async function createAdmin(prisma: PrismaClient) {
   const existingUser = await prisma.user.findUnique({
-    where: { email: 'system-administrator@q.com' },
+    where: { email: 'system-administrator@template.com' },
   });
 
   if (!existingUser?.id) {
@@ -12,7 +12,7 @@ async function createAdmin(prisma: PrismaClient) {
 
     const userCreated = await prisma.user.create({
       data: {
-        email: 'system-administrator@q.com',
+        email: 'system-administrator@template.com',
         name: 'System Administrator',
         rbacGlobalRoleIds,
         category: 'SYSTEM',

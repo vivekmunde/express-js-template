@@ -1,17 +1,5 @@
 import { STATUS_CODES } from '@/constants/status-codes';
 import { Express } from 'express';
-import { organizationDocumentStatusesRoutes } from './[organizationId]/document-statuses';
-import { organizationDocumentStatusRoutes } from './[organizationId]/document-statuses/[documentStatusId]';
-import { organizationDocumentStatusDisabledRoutes } from './[organizationId]/document-statuses/[documentStatusId]/disabled';
-import { organizationDocumentTypesRoutes } from './[organizationId]/document-types';
-import { organizationDocumentTypeRoutes } from './[organizationId]/document-types/[documentTypeId]';
-import { organizationDocumentTypeDisabledRoutes } from './[organizationId]/document-types/[documentTypeId]/disabled';
-import { organizationProjectsRoutes } from './[organizationId]/projects';
-import { organizationProjectRoutes } from './[organizationId]/projects/[projectId]';
-import { organizationDocumentCommentsRoutes } from './[organizationId]/projects/[projectId]/documents/[documentId]/document-comments';
-import { organizationDocumentCommentRoutes } from './[organizationId]/projects/[projectId]/documents/[documentId]/document-comments/[documentCommentId]';
-import { organizationDocumentSectionsRoutes } from './[organizationId]/projects/[projectId]/documents/[documentId]/document-sections';
-import { organizationDocumentSectionRoutes } from './[organizationId]/projects/[projectId]/documents/[documentId]/document-sections/[documentSectionId]';
 import { organizationAuthorizedToModifyUserRoutes } from './[organizationId]/rbac/authorized-to-modify-user/[userId]';
 import { organizationRolesRoutes } from './[organizationId]/roles';
 import { organizationRoleRoutes } from './[organizationId]/roles/[roleId]';
@@ -109,18 +97,6 @@ const routes = (app: Express) => {
   app.use(baseRoutePrefix, organizationRoleRoutes);
   app.use(baseRoutePrefix, organizationUsersRoutes);
   app.use(baseRoutePrefix, organizationUserRoutes);
-  app.use(baseRoutePrefix, organizationProjectsRoutes);
-  app.use(baseRoutePrefix, organizationProjectRoutes);
-  app.use(baseRoutePrefix, organizationDocumentTypesRoutes);
-  app.use(baseRoutePrefix, organizationDocumentTypeRoutes);
-  app.use(baseRoutePrefix, organizationDocumentTypeDisabledRoutes);
-  app.use(baseRoutePrefix, organizationDocumentStatusesRoutes);
-  app.use(baseRoutePrefix, organizationDocumentStatusRoutes);
-  app.use(baseRoutePrefix, organizationDocumentStatusDisabledRoutes);
-  app.use(baseRoutePrefix, organizationDocumentSectionsRoutes);
-  app.use(baseRoutePrefix, organizationDocumentSectionRoutes);
-  app.use(baseRoutePrefix, organizationDocumentCommentsRoutes);
-  app.use(baseRoutePrefix, organizationDocumentCommentRoutes);
 
   /*********************************************************************************
    * 404 handler - must be last

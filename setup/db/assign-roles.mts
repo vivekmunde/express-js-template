@@ -3,7 +3,7 @@ import { consoleSuccess, consoleWarning } from './log.mts';
 
 async function assignRoles(prisma: PrismaClient) {
   const existingUser = await prisma.user.findUnique({
-    where: { email: 'system-administrator@q.com' },
+    where: { email: 'system-administrator@template.com' },
   });
 
   if (existingUser?.id) {
@@ -11,7 +11,7 @@ async function assignRoles(prisma: PrismaClient) {
 
     const userUpdated = await prisma.user.update({
       where: {
-        email: 'system-administrator@q.com',
+        email: 'system-administrator@template.com',
       },
       data: {
         rbacGlobalRoleIds,
