@@ -10,7 +10,7 @@ async function createRole(
   }
 ) {
   const adminUser = await prisma.user.findUnique({
-    where: { email: 'system-administrator@q.com' },
+    where: { email: 'system-administrator@template.com' },
   });
 
   if (adminUser?.id) {
@@ -57,14 +57,6 @@ async function createRoles(prisma: PrismaClient) {
     MANAGE_ROLE: 'MANAGE_ROLE',
     READ_USER: 'READ_USER',
     MANAGE_USER: 'MANAGE_USER',
-    READ_PROJECT: 'READ_PROJECT',
-    MANAGE_PROJECT: 'MANAGE_PROJECT',
-    READ_DOCUMENT_TYPE: 'READ_DOCUMENT_TYPE',
-    MANAGE_DOCUMENT_TYPE: 'MANAGE_DOCUMENT_TYPE',
-    READ_DOCUMENT_STATUS: 'READ_DOCUMENT_STATUS',
-    MANAGE_DOCUMENT_STATUS: 'MANAGE_DOCUMENT_STATUS',
-    READ_DOCUMENT: 'READ_DOCUMENT',
-    MANAGE_DOCUMENT: 'MANAGE_DOCUMENT',
   };
 
   await createRole(prisma, {
